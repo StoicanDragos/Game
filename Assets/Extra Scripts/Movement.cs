@@ -11,10 +11,11 @@ public class Movement : MonoBehaviour {
 	private float angle;
 	Quaternion rotation;
 	private float speed = 5f;
+    public GameObject projectile;
 
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
 	{
 		playerTransform = GetComponent<Transform> ();
 	}
@@ -30,15 +31,14 @@ public class Movement : MonoBehaviour {
 		look = Camera.main.ScreenToWorldPoint (Input.mousePosition) - playerTransform.position;
 		angle = Mathf.Atan2 (look.y, look.x) * Mathf.Rad2Deg;
 		rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+        playerTransform.rotation = Quaternion.Lerp(playerTransform.rotation, rotation, speed * Time.deltaTime);
+        playerTransform.position += movement / 7;
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(projectile, playerTransform.position, playerTransform.rotation);
 
-
-	}
-
-	void FixedUpdate ()
-	{
-		playerTransform.position += movement/3;
-		playerTransform.rotation = Quaternion.Lerp (playerTransform.rotation, rotation, speed * Time.deltaTime);
-	}
+        }
+    }
 
 
 }

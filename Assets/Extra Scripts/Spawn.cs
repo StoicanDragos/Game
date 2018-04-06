@@ -11,8 +11,8 @@ public class Spawn : MonoBehaviour {
 
 
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
 	{
 		///enemyTransform = GetComponent <Transform> ();
 		InvokeRepeating ("Spawner", timer, timer);
@@ -32,9 +32,9 @@ public class Spawn : MonoBehaviour {
 	{
 		if (enemy.name == "Enemy") 
 		{
-			axisY = Random.Range (-30f, 30f);
-			axisX = Random.Range (-62f, 62f);
-			spawnPoz = new Vector3 (axisX, axisY, -1.5f);
+			axisY = Random.Range (-4f, 3f);
+			axisX = Random.Range (-7f, 8f);
+			spawnPoz = new Vector3 (axisX, axisY, -2f);
 			Object.Instantiate (enemy, spawnPoz, Quaternion.identity);
 		}
 	}
