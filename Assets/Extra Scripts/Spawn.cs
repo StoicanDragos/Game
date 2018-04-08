@@ -34,7 +34,7 @@ public class Spawn : MonoBehaviour {
 		{
 			axisY = Random.Range (-4f, 3f);
 			axisX = Random.Range (-7f, 8f);
-			spawnPoz = new Vector3 (axisX, axisY, -2f);
+			spawnPoz = new Vector3 (axisX, axisY, -1f);
 			Object.Instantiate (enemy, spawnPoz, Quaternion.identity);
 		}
 	}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour {
 
@@ -36,7 +37,6 @@ public class Movement : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(projectile, playerTransform.position, playerTransform.rotation);
-
         }
     }
 
