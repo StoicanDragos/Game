@@ -238,12 +238,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Behavior.cs" />
-    <Compile Include="Assets\Extra Scripts\Movement.cs" />
-    <Compile Include="Assets\Extra Scripts\ProjectileMove.cs" />
     <Compile Include="Assets\Extra Scripts\Shooting.cs" />
-    <Compile Include="Assets\Extra Scripts\Spawn.cs" />
-    <Compile Include="Assets\FPSCounter.cs" />
+    <Compile Include="Assets\GoldManagement.cs" />
+    <Compile Include="Assets\Scripts\Behavior.cs" />
+    <Compile Include="Assets\Scripts\FPSCounter.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\ProjectileMove.cs" />
+    <Compile Include="Assets\Scripts\Spawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
