@@ -8,6 +8,7 @@ public class Behavior : MonoBehaviour {
     private GameObject player;
     private float dir = 11f;
     private float timerMove = 1f;
+    private float timerShoot = 1f;
     private Vector2 look;
 	private float angle;
     Quaternion rotation;
@@ -16,6 +17,8 @@ public class Behavior : MonoBehaviour {
     void Start ()
     {
         InvokeRepeating("Movement", 0, timerMove);
+        timerShoot += Random.Range(-0.3f, 0.3f);
+        InvokeRepeating("Shooting", 0, timerShoot);
         player = Player.Instance.gameObject;
 	}
 
@@ -46,6 +49,11 @@ public class Behavior : MonoBehaviour {
     void Movement()
     {
         dir = Random.value;
+    }
+
+    void Shooting()
+    {
+        Instantiate(enemy_projectile, transform.position, transform.rotation);
     }
 	// Update is called once per frame
 	

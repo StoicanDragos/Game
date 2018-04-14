@@ -64,6 +64,8 @@ public class Player : MonoBehaviour {
     {
         Destroy(images[lifes]);
         lifes--;
+        if (lifes < 0)
+            Application.Quit();
     }
 
 }

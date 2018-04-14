@@ -241,6 +241,7 @@
     <Compile Include="Assets\Extra Scripts\Shooting.cs" />
     <Compile Include="Assets\GoldManagement.cs" />
     <Compile Include="Assets\Scripts\Behavior.cs" />
+    <Compile Include="Assets\Scripts\Enemy_ProjectileMove.cs" />
     <Compile Include="Assets\Scripts\FPSCounter.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\ProjectileMove.cs" />
