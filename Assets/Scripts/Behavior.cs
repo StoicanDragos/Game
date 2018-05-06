@@ -51,10 +51,9 @@ public class Behavior : MonoBehaviour {
         dir = Random.value;
     }
 
-    void Shooting()
+   /* void Shooting()
     {
         Instantiate(enemy_projectile, transform.position, transform.rotation);
-    }
-	// Update is called once per frame
+    }*/
 	
 }

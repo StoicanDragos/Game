@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
 	private float speed = 5f;
     public GameObject projectile;
     public static Player Instance;
+    
 
     //Generate lifes
     public Image hearth;
